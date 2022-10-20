@@ -33,3 +33,29 @@ jobs:
 
     - name: e2e test 
       run: make test-e2e
+
+  e2e-helm-all:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.19
+
+    - name: e2e test 
+      run: make test-e2e-helm-all
+
+  e2e-helm:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.19
+
+    - name: e2e test 
+      run: make test-e2e-helm
