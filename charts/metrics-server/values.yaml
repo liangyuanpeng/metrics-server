@@ -132,3 +132,6 @@ tolerations: []
 affinity: {}
 
 topologySpreadConstraints: []
+
+# Annotations to add to the deployment
+deploymentAnnotations: {}
